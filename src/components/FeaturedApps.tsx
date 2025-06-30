@@ -38,20 +38,20 @@ export const FeaturedApps = () => {
   ];
 
   return (
-    <section id="apps" className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
+    <section id="apps" className="py-20 bg-gradient-to-br from-gray-50 to-blue-50 dark:from-gray-800 dark:to-blue-900/20 transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
             Featured Apps
           </h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
             Discover my latest Android applications, each crafted with attention to detail and user experience.
           </p>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {apps.map((app) => (
-            <Card key={app.id} className="group hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 overflow-hidden">
+            <Card key={app.id} className="group hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 overflow-hidden bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700">
               <div className="aspect-[3/4] overflow-hidden">
                 <img
                   src={app.image}
@@ -61,16 +61,16 @@ export const FeaturedApps = () => {
               </div>
               <CardContent className="p-6">
                 <div className="flex items-center justify-between mb-3">
-                  <h3 className="text-xl font-semibold text-gray-900">
+                  <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
                     {app.title}
                   </h3>
                   <div className="flex items-center space-x-1">
                     <Star className="w-4 h-4 text-yellow-400 fill-current" />
-                    <span className="text-sm text-gray-600">{app.rating}</span>
+                    <span className="text-sm text-gray-600 dark:text-gray-400">{app.rating}</span>
                   </div>
                 </div>
                 
-                <p className="text-gray-600 mb-4 line-clamp-3">
+                <p className="text-gray-600 dark:text-gray-400 mb-4 line-clamp-3">
                   {app.description}
                 </p>
                 
@@ -78,7 +78,7 @@ export const FeaturedApps = () => {
                   {app.tags.map((tag, index) => (
                     <span
                       key={index}
-                      className="px-3 py-1 bg-blue-100 text-blue-700 text-sm rounded-full"
+                      className="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 text-sm rounded-full"
                     >
                       {tag}
                     </span>
@@ -86,13 +86,13 @@ export const FeaturedApps = () => {
                 </div>
                 
                 <div className="flex items-center justify-between">
-                  <span className="text-sm text-gray-500">
+                  <span className="text-sm text-gray-500 dark:text-gray-400">
                     {app.downloads} downloads
                   </span>
                   <Button
                     variant="outline"
                     size="sm"
-                    className="hover:bg-blue-600 hover:text-white transition-colors"
+                    className="hover:bg-blue-600 hover:text-white transition-colors border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300"
                   >
                     <ExternalLink className="w-4 h-4 mr-2" />
                     View App
