@@ -61,6 +61,56 @@ export const FeaturedApps = () => {
       downloads: "30K+",
       tags: ["Food", "Social", "Discovery"],
       playStoreUrl: "#"
+    },
+    {
+      id: 6,
+      title: "PhotoEdit Pro",
+      description: "Professional photo editing app with advanced filters, AI-powered enhancements, and cloud storage integration.",
+      image: "https://images.unsplash.com/photo-1606983340126-99ab4feaa64a?w=400&h=600&fit=crop",
+      rating: 4.6,
+      downloads: "40K+",
+      tags: ["Photography", "AI", "Editing"],
+      playStoreUrl: "#"
+    },
+    {
+      id: 7,
+      title: "MusicMood",
+      description: "Discover and stream music based on your mood with intelligent playlists and social sharing features.",
+      image: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400&h=600&fit=crop",
+      rating: 4.4,
+      downloads: "60K+",
+      tags: ["Music", "Streaming", "Social"],
+      playStoreUrl: "#"
+    },
+    {
+      id: 8,
+      title: "StudyBuddy",
+      description: "Educational app with flashcards, study schedules, progress tracking, and collaborative learning features.",
+      image: "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=400&h=600&fit=crop",
+      rating: 4.7,
+      downloads: "35K+",
+      tags: ["Education", "Productivity", "Learning"],
+      playStoreUrl: "#"
+    },
+    {
+      id: 9,
+      title: "TravelGuide",
+      description: "Complete travel companion with offline maps, local recommendations, itinerary planning, and expense tracking.",
+      image: "https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=400&h=600&fit=crop",
+      rating: 4.8,
+      downloads: "45K+",
+      tags: ["Travel", "Maps", "Planning"],
+      playStoreUrl: "#"
+    },
+    {
+      id: 10,
+      title: "MindfulMoments",
+      description: "Meditation and mindfulness app with guided sessions, breathing exercises, and progress tracking.",
+      image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&h=600&fit=crop",
+      rating: 4.9,
+      downloads: "20K+",
+      tags: ["Wellness", "Meditation", "Health"],
+      playStoreUrl: "#"
     }
   ];
 
