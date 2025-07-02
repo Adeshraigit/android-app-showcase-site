@@ -97,37 +97,6 @@ export const Contact = () => {
               ))}
             </div>
           </div>
-
-          {/* Why Work With Me Card */}
-          <Card className="bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700">
-            <CardContent className="p-8 text-center">
-              <h4 className="text-2xl font-semibold text-gray-900 dark:text-white mb-6">
-                Why Work With Me?
-              </h4>
-              <div className="grid md:grid-cols-2 gap-6">
-                <div className="space-y-3">
-                  <div className="flex items-center text-gray-600 dark:text-gray-300">
-                    <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>
-                    5+ years of Android development experience
-                  </div>
-                  <div className="flex items-center text-gray-600 dark:text-gray-300">
-                    <span className="w-2 h-2 bg-purple-600 rounded-full mr-3"></span>
-                    Modern development practices and clean code
-                  </div>
-                </div>
-                <div className="space-y-3">
-                  <div className="flex items-center text-gray-600 dark:text-gray-300">
-                    <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>
-                    Timely delivery and clear communication
-                  </div>
-                  <div className="flex items-center text-gray-600 dark:text-gray-300">
-                    <span className="w-2 h-2 bg-purple-600 rounded-full mr-3"></span>
-                    Post-launch support and maintenance
-                  </div>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
         </div>
       </div>
     </section>
