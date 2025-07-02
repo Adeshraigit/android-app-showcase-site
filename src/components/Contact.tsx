@@ -1,8 +1,5 @@
 
-import { Mail, MapPin, Phone, Send } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
+import { Mail, MapPin, Phone, Github, Linkedin, Twitter } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 
 export const Contact = () => {
@@ -27,6 +24,27 @@ export const Contact = () => {
     }
   ];
 
+  const socialLinks = [
+    {
+      icon: Github,
+      name: "GitHub",
+      url: "#",
+      color: "hover:bg-gray-900 dark:hover:bg-gray-700"
+    },
+    {
+      icon: Linkedin,
+      name: "LinkedIn",
+      url: "#",
+      color: "hover:bg-blue-600"
+    },
+    {
+      icon: Twitter,
+      name: "Twitter",
+      url: "#",
+      color: "hover:bg-blue-400"
+    }
+  ];
+
   return (
     <section id="contact" className="py-20 bg-gradient-to-br from-gray-50 to-blue-50 dark:from-gray-800 dark:to-blue-900/20 transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -35,108 +53,81 @@ export const Contact = () => {
             Get In Touch
           </h2>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-            Have a project in mind or want to collaborate? I'd love to hear from you. 
-            Let's create something amazing together!
+            Ready to start your next project? Let's connect and discuss how I can help bring your ideas to life.
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12">
-          {/* Contact Form */}
-          <Card className="p-8 bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700">
-            <CardContent className="p-0">
-              <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-6">
-                Send a Message
-              </h3>
-              <form className="space-y-6">
-                <div className="grid md:grid-cols-2 gap-4">
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                      First Name
-                    </label>
-                    <Input placeholder="John" className="bg-white dark:bg-gray-700 border-gray-300 dark:border-gray-600 text-gray-900 dark:text-white" />
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                      Last Name
-                    </label>
-                    <Input placeholder="Doe" className="bg-white dark:bg-gray-700 border-gray-300 dark:border-gray-600 text-gray-900 dark:text-white" />
-                  </div>
+        <div className="max-w-4xl mx-auto">
+          {/* Contact Information Cards */}
+          <div className="grid md:grid-cols-3 gap-8 mb-12">
+            {contactInfo.map((item, index) => (
+              <a
+                key={index}
+                href={item.link}
+                className="flex flex-col items-center p-6 bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border border-gray-200 dark:border-gray-700"
+              >
+                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full mb-4">
+                  <item.icon className="w-6 h-6 text-white" />
                 </div>
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                    Email
-                  </label>
-                  <Input type="email" placeholder="john@example.com" className="bg-white dark:bg-gray-700 border-gray-300 dark:border-gray-600 text-gray-900 dark:text-white" />
-                </div>
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                    Subject
-                  </label>
-                  <Input placeholder="Project Discussion" className="bg-white dark:bg-gray-700 border-gray-300 dark:border-gray-600 text-gray-900 dark:text-white" />
-                </div>
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                    Message
-                  </label>
-                  <Textarea
-                    placeholder="Tell me about your project..."
-                    rows={5}
-                    className="bg-white dark:bg-gray-700 border-gray-300 dark:border-gray-600 text-gray-900 dark:text-white"
-                  />
-                </div>
-                <Button className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700">
-                  <Send className="w-4 h-4 mr-2" />
-                  Send Message
-                </Button>
-              </form>
-            </CardContent>
-          </Card>
+                <h4 className="font-semibold text-gray-900 dark:text-white mb-2">
+                  {item.title}
+                </h4>
+                <p className="text-gray-600 dark:text-gray-300 text-center">
+                  {item.value}
+                </p>
+              </a>
+            ))}
+          </div>
 
-          {/* Contact Information */}
-          <div className="space-y-8">
-            <div>
-              <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-6">
-                Contact Information
-              </h3>
-              <p className="text-gray-600 dark:text-gray-300 mb-8">
-                Feel free to reach out through any of these channels. I typically respond within 24 hours.
-              </p>
-            </div>
-
-            <div className="space-y-6">
-              {contactInfo.map((item, index) => (
+          {/* Social Links */}
+          <div className="text-center mb-12">
+            <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-6">
+              Follow Me
+            </h3>
+            <div className="flex justify-center space-x-4">
+              {socialLinks.map((social, index) => (
                 <a
                   key={index}
-                  href={item.link}
-                  className="flex items-center p-4 bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border border-gray-200 dark:border-gray-700"
+                  href={social.url}
+                  className={`flex items-center justify-center w-12 h-12 bg-white dark:bg-gray-800 rounded-full shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border border-gray-200 dark:border-gray-700 ${social.color} hover:text-white`}
+                  aria-label={social.name}
                 >
-                  <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full mr-4">
-                    <item.icon className="w-6 h-6 text-white" />
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-gray-900 dark:text-white">
-                      {item.title}
-                    </h4>
-                    <p className="text-gray-600 dark:text-gray-300">
-                      {item.value}
-                    </p>
-                  </div>
+                  <social.icon className="w-5 h-5" />
                 </a>
               ))}
             </div>
+          </div>
 
-            <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md border border-gray-200 dark:border-gray-700">
-              <h4 className="font-semibold text-gray-900 dark:text-white mb-3">
+          {/* Why Work With Me Card */}
+          <Card className="bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700">
+            <CardContent className="p-8 text-center">
+              <h4 className="text-2xl font-semibold text-gray-900 dark:text-white mb-6">
                 Why Work With Me?
               </h4>
-              <ul className="space-y-2 text-gray-600 dark:text-gray-300">
-                <li>• 5+ years of Android development experience</li>
-                <li>• Modern development practices and clean code</li>
-                <li>• Timely delivery and clear communication</li>
-                <li>• Post-launch support and maintenance</li>
-              </ul>
-            </div>
-          </div>
+              <div className="grid md:grid-cols-2 gap-6">
+                <div className="space-y-3">
+                  <div className="flex items-center text-gray-600 dark:text-gray-300">
+                    <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>
+                    5+ years of Android development experience
+                  </div>
+                  <div className="flex items-center text-gray-600 dark:text-gray-300">
+                    <span className="w-2 h-2 bg-purple-600 rounded-full mr-3"></span>
+                    Modern development practices and clean code
+                  </div>
+                </div>
+                <div className="space-y-3">
+                  <div className="flex items-center text-gray-600 dark:text-gray-300">
+                    <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>
+                    Timely delivery and clear communication
+                  </div>
+                  <div className="flex items-center text-gray-600 dark:text-gray-300">
+                    <span className="w-2 h-2 bg-purple-600 rounded-full mr-3"></span>
+                    Post-launch support and maintenance
+                  </div>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
         </div>
       </div>
     </section>
