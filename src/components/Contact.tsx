@@ -7,19 +7,19 @@ export const Contact = () => {
     {
       icon: Mail,
       title: "Email",
-      value: "developer@example.com",
-      link: "mailto:developer@example.com"
+      value: "mushtaqmaniyarr@gmail.com",
+      link: "mailto:mushtaqmaniyarr@gmail.com"
     },
     {
       icon: Phone,
       title: "Phone",
-      value: "+1 (555) 123-4567",
-      link: "tel:+15551234567"
+      value: "+91 83558 92847",
+      // link: "tel:+15551234567"
     },
     {
       icon: MapPin,
       title: "Location",
-      value: "San Francisco, CA",
+      value: "Mumbai, India",
       link: "#"
     }
   ];
@@ -28,19 +28,19 @@ export const Contact = () => {
     {
       icon: Github,
       name: "GitHub",
-      url: "#",
+      url: "https://github.com/Mushtaq-Androiddev",
       color: "hover:bg-gray-900 dark:hover:bg-gray-700"
     },
     {
       icon: Linkedin,
       name: "LinkedIn",
-      url: "#",
+      url: "https://www.linkedin.com/in/mushtaq-maniyar/",
       color: "hover:bg-blue-600"
     },
     {
       icon: Twitter,
       name: "Twitter",
-      url: "#",
+      url: "https://x.com/MushtaqManiyarr",
       color: "hover:bg-blue-400"
     }
   ];
