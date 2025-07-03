@@ -24,10 +24,9 @@ export const Navigation = () => {
 
   const navItems = [
     { href: "#home", label: "Home" },
-    { href: "#about", label: "About" },
     { href: "#apps", label: "Apps" },
+    { href: "#about", label: "About" },
     { href: "#services", label: "Services"},
-    { href: "#skills", label: "Skills" },
     { href: "#contact", label: "Contact" },
   ];
 
@@ -42,7 +41,14 @@ export const Navigation = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="font-bold text-xl bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-            Mushtaq Maniyar
+           <div className="flex items-center space-x-3 font-bold text-xl bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+              <img 
+                src="/portfolio.jpeg" 
+                alt="photo" 
+                className="w-12 h-12 rounded-full object-cover"
+              />
+              Mustaq Maniyar
+            </div>
           </div>
 
           {/* Desktop Navigation */}

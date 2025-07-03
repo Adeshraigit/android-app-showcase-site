@@ -13,104 +13,44 @@ export const FeaturedApps = () => {
   const apps = [
     {
       id: 1,
-      title: "TaskMaster Pro",
-      description: "A powerful task management app with intuitive design and advanced productivity features. Built with Kotlin and Jetpack Compose.",
-      image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=400&h=600&fit=crop",
-      rating: 4.8,
-      downloads: "10K+",
+      title: "PromptPix",
+      description: "PromptPix lets users generate images using AI via prompts, drawings, or diagrams.",
+      image: "/a1.png",
+      // rating: 4.8,
+      // downloads: "10K+",
       tags: ["Productivity", "Material Design", "Kotlin"],
-      playStoreUrl: "#"
+      url: "/PromptPix.apk"
     },
     {
       id: 2,
-      title: "WeatherWise",
-      description: "Beautiful weather app with accurate forecasts and stunning animations. Features location-based weather and customizable widgets.",
-      image: "https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=400&h=600&fit=crop",
-      rating: 4.6,
-      downloads: "25K+",
+      title: "Notes",
+      description: "A basic Notes app with a beautiful UI for creating notes.",
+      image: "/a2.png",
+      // rating: 4.6,
+      // downloads: "25K+",
       tags: ["Weather", "Animation", "Widgets"],
-      playStoreUrl: "#"
+      url: "#"
     },
     {
       id: 3,
-      title: "FitTracker",
-      description: "Comprehensive fitness tracking app with workout plans, progress monitoring, and social features for motivation.",
-      image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=600&fit=crop",
-      rating: 4.9,
-      downloads: "50K+",
+      title: "Tejyash Health Care App",
+      description: "Health care app featuring a blood bank, disease dictionary, and more.",
+      image: "/a3.png",
+      rating: null,
+      downloads: "",
       tags: ["Fitness", "Health", "Social"],
-      playStoreUrl: "#"
+      url: "/tejas.apk"
     },
     {
       id: 4,
-      title: "ExpenseTracker",
-      description: "Smart expense tracking app with budgeting tools, category management, and detailed financial insights.",
-      image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=400&h=600&fit=crop",
-      rating: 4.7,
-      downloads: "15K+",
-      tags: ["Finance", "Budgeting", "Analytics"],
-      playStoreUrl: "#"
+      title: "Calcy Pro",
+      description: "Health care app featuring a blood bank, disease dictionary, and more.",
+      image: "https://mushtaqmaniyar.netlify.app/Images/Tejyash_icon.png",
+      rating: null,
+      downloads: "",
+      tags: ["Fitness", "Health", "Social"],
+      url: "/CalcyPro.apk"
     },
-    {
-      id: 5,
-      title: "FoodieFind",
-      description: "Discover local restaurants and cuisines with personalized recommendations and social reviews.",
-      image: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=400&h=600&fit=crop",
-      rating: 4.5,
-      downloads: "30K+",
-      tags: ["Food", "Social", "Discovery"],
-      playStoreUrl: "#"
-    },
-    {
-      id: 6,
-      title: "PhotoEdit Pro",
-      description: "Professional photo editing app with advanced filters, AI-powered enhancements, and cloud storage integration.",
-      image: "https://images.unsplash.com/photo-1606983340126-99ab4feaa64a?w=400&h=600&fit=crop",
-      rating: 4.6,
-      downloads: "40K+",
-      tags: ["Photography", "AI", "Editing"],
-      playStoreUrl: "#"
-    },
-    {
-      id: 7,
-      title: "MusicMood",
-      description: "Discover and stream music based on your mood with intelligent playlists and social sharing features.",
-      image: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400&h=600&fit=crop",
-      rating: 4.4,
-      downloads: "60K+",
-      tags: ["Music", "Streaming", "Social"],
-      playStoreUrl: "#"
-    },
-    {
-      id: 8,
-      title: "StudyBuddy",
-      description: "Educational app with flashcards, study schedules, progress tracking, and collaborative learning features.",
-      image: "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=400&h=600&fit=crop",
-      rating: 4.7,
-      downloads: "35K+",
-      tags: ["Education", "Productivity", "Learning"],
-      playStoreUrl: "#"
-    },
-    {
-      id: 9,
-      title: "TravelGuide",
-      description: "Complete travel companion with offline maps, local recommendations, itinerary planning, and expense tracking.",
-      image: "https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=400&h=600&fit=crop",
-      rating: 4.8,
-      downloads: "45K+",
-      tags: ["Travel", "Maps", "Planning"],
-      playStoreUrl: "#"
-    },
-    {
-      id: 10,
-      title: "MindfulMoments",
-      description: "Meditation and mindfulness app with guided sessions, breathing exercises, and progress tracking.",
-      image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&h=600&fit=crop",
-      rating: 4.9,
-      downloads: "20K+",
-      tags: ["Wellness", "Meditation", "Health"],
-      playStoreUrl: "#"
-    }
   ];
 
   return (
@@ -156,7 +96,7 @@ export const FeaturedApps = () => {
                         {app.title}
                       </h3>
                       <div className="flex items-center space-x-1 flex-shrink-0">
-                        <Star className="w-4 h-4 text-yellow-400 fill-current" />
+                        {/* <Star className="w-4 h-4 text-yellow-400 fill-current" /> */}
                         <span className="text-sm text-gray-600 dark:text-gray-400">{app.rating}</span>
                       </div>
                     </div>
@@ -178,7 +118,7 @@ export const FeaturedApps = () => {
                     
                     <div className="flex items-center justify-between">
                       <span className="text-xs text-gray-500 dark:text-gray-400">
-                        {app.downloads} downloads
+                        {app.downloads} 
                       </span>
                       <Button
                         variant="outline"
@@ -186,7 +126,7 @@ export const FeaturedApps = () => {
                         className="hover:bg-blue-600 hover:text-white transition-colors border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 text-xs"
                       >
                         <ExternalLink className="w-3 h-3 mr-1" />
-                        View App
+                        <a href={app.url} download >Download</a>
                       </Button>
                     </div>
                   </CardContent>
@@ -231,7 +171,7 @@ export const FeaturedApps = () => {
                           {app.title}
                         </h3>
                         <div className="flex items-center space-x-1 flex-shrink-0">
-                          <Star className="w-4 h-4 text-yellow-400 fill-current" />
+                          {/* <Star className="w-4 h-4 text-yellow-400 fill-current" /> */}
                           <span className="text-sm text-gray-600 dark:text-gray-400">{app.rating}</span>
                         </div>
                       </div>
@@ -253,7 +193,7 @@ export const FeaturedApps = () => {
                       
                       <div className="flex items-center justify-between">
                         <span className="text-xs sm:text-sm text-gray-500 dark:text-gray-400">
-                          {app.downloads} downloads
+                          {app.downloads}
                         </span>
                         <Button
                           variant="outline"
@@ -261,7 +201,7 @@ export const FeaturedApps = () => {
                           className="hover:bg-blue-600 hover:text-white transition-colors border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 text-xs sm:text-sm"
                         >
                           <ExternalLink className="w-3 h-3 sm:w-4 sm:h-4 mr-1 sm:mr-2" />
-                          View App
+                           <a href={app.url} download >Download</a>
                         </Button>
                       </div>
                     </CardContent>

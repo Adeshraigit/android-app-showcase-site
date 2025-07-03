@@ -35,14 +35,9 @@ export const About = () => {
           {/* Profile Image Placeholder */}
           <div className="flex justify-center lg:justify-end">
             <div className="relative">
-              <div className="w-80 h-80 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 p-1">
-                <div className="w-full h-full rounded-full bg-gray-200 dark:bg-gray-700 flex items-center justify-center overflow-hidden">
-                  <div className="text-gray-500 dark:text-gray-400 text-center">
-                    <Users className="w-16 h-16 mx-auto mb-2" />
-                    <p className="text-xs">Placeholder</p>
-                  </div>
-                </div>
-              </div>
+              
+                <img src="/about.png" alt="" />
+              
               {/* Decorative elements */}
               <div className="absolute -top-4 -right-4 w-24 h-24 bg-gradient-to-r from-blue-400/20 to-purple-400/20 rounded-full blur-xl"></div>
               <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-gradient-to-r from-purple-400/15 to-pink-400/15 rounded-full blur-2xl"></div>
